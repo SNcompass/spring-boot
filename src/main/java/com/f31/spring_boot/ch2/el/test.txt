@@ -1,0 +1,16 @@
+IDEA读取properties文件报错：
+cannot be opened because it does not exist错误解决方法:
+解决办法：在pom文件中加入resources标签
+<build>
+    <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+        </resources>
+</build>
